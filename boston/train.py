@@ -15,7 +15,7 @@ def read_data(path):
     with open(path) as f:
         lines = f.readlines()
     lines = [eval(line.strip()) for line in lines]
-    X, y = zip(*lines) #X, y是嵌套数组结构
+    X, y = zip(*lines) #X, y是嵌套数组结构,zip返回tuple
     X = [extend_feature(x) for x in X]
     X = np.array(X)
     y = np.array(y)
