@@ -6,14 +6,16 @@ from sklearn.model_selection import cross_val_predict
 from numpy import shape
 from sklearn import metrics
 import numpy as np
+import random
 
 def extend_feature(x):
+    #return [x[0], random.uniform(-10,10)]
     return x
 def read_data(path):
     with open(path) as f:
         lines = f.readlines()
     lines = [eval(line.strip()) for line in lines]
-    X, y = zip(*lines)
+    X, y = zip(*lines) #X, y是嵌套数组结构
     X = [extend_feature(x) for x in X]
     X = np.array(X)
     y = np.array(y)
