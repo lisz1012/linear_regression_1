@@ -1,0 +1,26 @@
+y = w1x1 + w2x2 + ... wnxn + w0
+y = WtX = (w0, w1, wn)t * (1, x1, x2 ... xn)
+w1 ... wn, w0
+
+y = wx + b = tailor
+mse = （(wx1 + b - y1)^2 + (wx2 + b - y2)^2 + ...）/n
+mse 的最小值时的 w 和 b
+mse对w和b求导数为0，极小值==最小值 w，b多组，就判断极小值，然后比较求出最小值
+
+
+mae = （|wx1 + b - y1| + |wx2 + b - y2| + ...）/n (mse惩罚函数，约束)
+
+y = 10x (100)
+y = 3x (5)
+
+square:
+y = 9.5x
+
+abs
+y ~ 10x
+
+y = 5x
+y = 9x
+
+mse = （(wx1 + b - y1)^100 + (wx2 + b - y2)^100 + ...）/n
+
